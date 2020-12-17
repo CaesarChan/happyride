@@ -1,17 +1,19 @@
 repositories:
-  - name: stable
-    url: https://kubernetes-charts.storage.googleapis.com
+  - name: jenkins
+    url: https://charts.jenkins.io
 
 releases:
   - name: jenkins
     namespace: {{ env "NAMESPACE" | default "happyride" }}
-    chart: stable/jenkins
-    version: 2.4.1
+    chart: jenkins/jenkins
+    version: 3.0.8
     wait: true
     values:
-      - master:
+      - controller:
           serviceType: NodePort
           persistence:
             size: 20Gi
+          installPlugins:
+            - git:4.5.0
           additionalPlugins:
             - "blueocean:1.23.2"

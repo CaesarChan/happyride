@@ -1,12 +1,12 @@
 repositories:
-  - name: stable
-    url: https://kubernetes-charts.storage.googleapis.com
+  - name: twuni
+    url: https://helm.twun.io
 
 releases:
   - name: docker-registry
     namespace: {{ env "NAMESPACE" | default "happyride" }}
-    chart: stable/docker-registry
-    version: 1.9.4
+    chart: twuni/docker-registry
+    version: 1.10.0
     wait: true
     values:
       - service:

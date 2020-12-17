@@ -27,13 +27,13 @@ $ minikube addons enable metrics-server
 $ brew install kubectl
 ```
 
-* [Helm](https://helm.sh/) - 版本 `3.2.4_1`
+* [Helm](https://helm.sh/) - 版本 `3.4.2`
 
 ```bash
 $ brew install helm
 ```
 
-* [helmfile](https://github.com/roboll/helmfile) - 版本 `0.120.0`
+* [helmfile](https://github.com/roboll/helmfile) - 版本 `0.135.0`
 
 ```bash
 $ brew install helmfile
@@ -106,3 +106,4 @@ $ kubectl label namespace happyride istio-injection=enabled
 ```bash
 $ helmfile apply
 ```
+
