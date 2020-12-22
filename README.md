@@ -8,11 +8,34 @@
 swagger-codegen
 对应的 mvn 插件
 
-本地开发首先执行两个命令
+### 本地开发首先执行两个命令
 ```shell script
-mvn clean compile
 mvn clean install
+mvn clean compile
 ```
+
+### 编译镜像
+1.先暴露集群端口
+```shell script
+kubectl port-forward service/docker-registry
+ 5000:5000 -n happyride
+```
+
+2.设置环境变量
+```shell script
+export CONTAINER_REGISTRY=127.0.0.1:5000
+```
+
+检查环境变量
+```shell script
+env | grep CONTAINER_REGISTRY
+```
+
+3.执行 mvn 命令
+```shell script
+mvn -B -ntp -Dmaven.test.failure.ignore install
+```
+
 
 本地开发需要Docker Compose的支持，在`dev`目录下有开发所需的Docker Compose文件。
 
