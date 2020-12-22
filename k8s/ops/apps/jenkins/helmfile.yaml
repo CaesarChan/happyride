@@ -13,4 +13,3 @@ releases:
           serviceType: NodePort
           persistence:
             size: 20Gi
-          installPlugins: []
