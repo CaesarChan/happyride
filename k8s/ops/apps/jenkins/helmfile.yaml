@@ -13,7 +13,4 @@ releases:
           serviceType: NodePort
           persistence:
             size: 20Gi
-          installPlugins:
-            - git:4.5.0
-          additionalPlugins:
-            - "blueocean:1.23.2"
+          installPlugins: []
