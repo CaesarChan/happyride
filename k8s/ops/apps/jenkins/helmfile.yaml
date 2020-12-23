@@ -16,6 +16,6 @@ releases:
           adminPassword: "123"
           serviceType: NodePort
           persistence:
-            storageClass: my-jenkins
+            storageClass: my-storage
             size: 20Gi
           installPlugins: []
