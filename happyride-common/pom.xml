@@ -38,4 +38,17 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>
+          </mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
