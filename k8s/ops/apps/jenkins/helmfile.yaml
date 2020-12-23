@@ -1,18 +1,16 @@
 repositories:
-  - name: bitnami
-    url: https://charts.bitnami.com/bitnami
+  - name: jenkins
+    url: https://charts.jenkins.io
 
 releases:
   - name: jenkins
     namespace: {{ env "NAMESPACE" | default "happyride" }}
-    chart: bitnami/jenkins
-    version: 7.0.3
+    chart: jenkins/jenkins
+    version: 3.0.8
     wait: true
     values:
       - controller:
           serviceType: NodePort
           persistence:
             size: 20Gi
-          additionalPlugins:
-            - "localization-zh-cn:1.0.24"
-            - "blueocean:1.23.2"
+          installPlugins: []
