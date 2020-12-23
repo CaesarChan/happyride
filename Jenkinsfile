@@ -51,7 +51,7 @@ spec:
         CONTAINER_REGISTRY='docker-registry:5000'
       }
       steps {
-        git 'https://github.com/alexcheng1982/happyride'
+        git 'https://github.com/CaesarChan/happyride'
         container('maven') {
           sh 'mvn -B -ntp -Dmaven.test.failure.ignore install'
           junit '**/target/surefire-reports/TEST-*.xml'
@@ -67,7 +67,7 @@ spec:
         CONTAINER_REGISTRY = "localhost:30000"
       }
       steps {
-        git 'https://github.com/alexcheng1982/happyride'
+        git 'https://github.com/CaesarChan/happyride'
         container('helmfile') {
           sh 'cd k8s/happyride/apps/address-service && helmfile apply'
         }
