@@ -16,6 +16,7 @@ releases:
           adminPassword: "123"
           serviceType: NodePort
           persistence:
-            storageClass: my-storage
+            storageClass: "my-storage"
+            accessMode: "ReadWriteMany"
             size: 20Gi
           installPlugins: []
