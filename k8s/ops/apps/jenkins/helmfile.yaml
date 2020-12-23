@@ -10,6 +10,10 @@ releases:
     wait: true
     values:
       - controller:
+          image: "registry.cn-shanghai.aliyuncs.com/clound-native-ops2/jenkins"
+          tag: "lts"
+          imagePullPolicy: IfNotPresent
+          adminPassword: "123"
           serviceType: NodePort
           persistence:
             size: 20Gi
