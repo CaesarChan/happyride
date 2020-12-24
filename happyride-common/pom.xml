@@ -44,8 +44,7 @@
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>jib-maven-plugin</artifactId>
         <configuration>
-          <mainClass>
-          </mainClass>
+          <skip>true</skip>
         </configuration>
       </plugin>
     </plugins>
